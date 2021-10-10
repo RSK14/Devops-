@@ -1,0 +1,8 @@
+git int -initial
+git status 
+git add . -- curent dir all
+git add *
+
+git comit -m (m - meassage)
+git --global user.name "satheesh"
+git -- global user.mail "test"
