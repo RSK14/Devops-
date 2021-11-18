@@ -13,9 +13,9 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: ./test.txt
-       AWS_REGION: 'ap-south-1'
+       FILE: ./akhil1.txt
+       AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-       AWS_ACCESS_KEY_ID: ${{ AKIAROL3D3EXCINAPC4I }}
-       AWS_SECRET_ACCESS_KEY: ${{ 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 }}
+       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
        SOURCE_DIR: "depoly"
