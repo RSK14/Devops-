@@ -21,7 +21,7 @@ set -e
 # fi
 
 # if [ -z "$AWS_REGION"]; then
-#   AWS_REGION="us-east-1"
+#   AWS_REGION="ap-south-1"
 # fi
 
 mkdir -p ~/.aws
