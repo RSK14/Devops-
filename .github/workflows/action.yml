@@ -9,11 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Upload file to bucket
-      uses: RSK14/Devops-@master
+      uses: RSK14/Devops-@S3 s3
       with:
        args: --acl public-read
       env:
-       FILE: ./akhil1.txt
+       FILE: test
        AWS_REGION: 'ap-south-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
