@@ -16,7 +16,7 @@ jobs:
       uses: RSK14/Devops-@s3 
       
       with:
-       args: --acl public-read
+       args: --acl public-read..
        
       env:
        FILE: git1,git
