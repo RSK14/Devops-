@@ -14,8 +14,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Upload file to bucket
       uses: RSK14/Devops-@s3 
+      
       with:
        args: --acl public-read
+       
       env:
        FILE: git1,git
        
