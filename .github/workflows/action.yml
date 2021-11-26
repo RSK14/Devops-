@@ -9,10 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Upload file to bucket
-      uses: RSK14/Devops-@S3
-      
-    - name: Upload file to bucket
-      uses: RSK14/Devops-@s3 
+      uses: RSK14/Devops-@S3 RSK14/Devops-@s3 
       
       with:
        args: --acl public-read
