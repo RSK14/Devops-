@@ -16,10 +16,11 @@ jobs:
       uses: RSK14/Devops-@s3 
       
       with:
-       args: --acl public-read..
+       args: --acl public-read
        
       env:
-       FILE: git1,git
+       FILE: git1
+             git
        
        AWS_REGION: 'ap-south-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
