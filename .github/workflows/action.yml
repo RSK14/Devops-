@@ -21,7 +21,8 @@ jobs:
     - name: Upload file to bucket
       uses: RSK14/Devops-@S3  
       with:
-       args: --acl public-read
+       args: --acl public-read --delete
+
       env:
        FILE: git,git1
        AWS_REGION: '*'
