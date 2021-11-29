@@ -7,14 +7,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Upload file to bucket
-      uses: RSK14/Devops-@S3
+      uses: RSK14/Devops-@master
+    - name: Upload file to bucket
+      uses: RSK14/Devops-@s3
+    - name: Upload file to bucket
+      uses: RSK14/Devops-@S3  
       with:
        args: --acl public-read
       env:
-       FILE: test
-       AWS_REGION: 'ap-south-1'
+       FILE: git
+       AWS_REGION: '*'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
