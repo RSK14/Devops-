@@ -7,7 +7,6 @@ on:
       - master
       - s3
       - S3
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
