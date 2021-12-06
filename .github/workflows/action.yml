@@ -17,7 +17,7 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: git
+       FILE: git,test
        AWS_REGION: '*'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
