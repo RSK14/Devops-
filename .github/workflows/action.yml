@@ -1,12 +1,7 @@
 # inside .github/workflows/your-action.yml
 name: Add File to Bucket
-on:
-  pull_request:
-  push:
-    branches:
-      - master
-      - s3
-      - S3
+on: push
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,18 +9,16 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Upload file to bucket
-      uses: RSK14/Devops-@master
+      uses: RSK14/Devops-@S3
+    - uses: actions/checkout@master
     - name: Upload file to bucket
-      uses: RSK14/Devops-@s3
-    - name: Upload file to bucket
-      uses: RSK14/Devops-@S3  
+      uses: RSK14/Devops-@s3  
       with:
-       args: --acl public-read --delete
-
+       args: --acl public-read
       env:
-       FILE: git,git1
-       AWS_REGION: ${{ secrets.AWS_REGION }}
+       FILE: git1,git
+       AWS_REGION: '*'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-       SOURCE_DIR: "deploy"
+       SOURCE_DIR: "depoly"
