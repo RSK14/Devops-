@@ -1,21 +1,21 @@
 # inside .github/workflows/your-action.yml
 name: Add File to Bucket
 on: push
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@master
     - name: Upload file to bucket
       uses: RSK14/Devops-@S3
     - name: Upload file to bucket
       uses: RSK14/Devops-@s3
+      
       with:
        args: --acl public-read
       env:
        FILE: git1 git
+       
        AWS_REGION: '*'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
