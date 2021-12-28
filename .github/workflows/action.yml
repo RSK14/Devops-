@@ -12,12 +12,13 @@ jobs:
       uses: RSK14/Devops-@s3
       
       with:
-       args: --acl Private-read
+       args: --acl public-read --follow-symlinks --delete
       env:
        FILE: git1 git
        
-       aws-region: '*'
+       AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
+     
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-       SOURCE_DIR: "deploy"
+       SOURCE_DIR: "public"
