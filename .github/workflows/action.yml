@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: RSK14/Devops-@s3
+   # - uses: RSK14/Devops-@s3
     - uses: RSK14/Devops-@S3
       
       with:
        args: --acl Private-read --follow-symlinks --delete
       env:
-       FILE: git1 git
+       FILE: git1
        
        AWS_REGION: '*'   # optional: defaults to us-east-1
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
