@@ -8,12 +8,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@S3
+    - uses: actions/checkout@master
    # - uses: RSK14/Devops-@s3
     - uses: RSK14/Devops-@S3
       
       with:
-       args: --acl Private-read --follow-symlinks --delete
+       args: --acl Public-read --follow-symlinks --delete
       env:
        FILE: git1
        
