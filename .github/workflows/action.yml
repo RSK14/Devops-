@@ -10,7 +10,7 @@ jobs:
     - name: Upload file to bucket
       uses: RSK14/Devops-@master
       with:
-       args: --acl public-read
+       args: --acl Private-read
       env:
        FILE: test
        AWS_REGION: 'us-east-1'
