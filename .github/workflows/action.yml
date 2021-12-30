@@ -15,8 +15,8 @@ jobs:
       
       env:
        FILE: job
-             job1
-             job2
+       File1: job1
+       File2: job2
        
        AWS_REGION: 'ap-south-1' # optional: defaults to us-east-1
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
