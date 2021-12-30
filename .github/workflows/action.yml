@@ -14,8 +14,8 @@ jobs:
        args: --acl public-read
       
       env:
-       FILE: job
-       File1: job1
+       FILE: akhil.txt
+       File1: teest.txt
        File2: job2
        
        AWS_REGION: 'ap-south-1' # optional: defaults to us-east-1
