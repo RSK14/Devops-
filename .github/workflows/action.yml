@@ -14,7 +14,7 @@ jobs:
        args: --acl public-read
       
       env:
-       FILE: ./test30/job1/job2/job3
+       FILE: ./test30/job1 /*
         
        AWS_REGION: 'ap-south-1' # optional: defaults to us-east-1
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
