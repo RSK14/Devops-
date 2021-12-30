@@ -32,7 +32,8 @@ echo "[default]
 aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
 
-aws s3 cp ${FILE} s3://${S3_BUCKET}/ --recursive
+aws s3 cp ${FILE} s3://${S3_BUCKET}/${FILE} --recursive
+#aws s3 cp tets31 s3://dev2.business.appointos.com/tets31 --recursive
 
 rm -rf ~/.aws
 
