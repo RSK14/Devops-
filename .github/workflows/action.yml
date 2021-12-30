@@ -15,7 +15,7 @@ jobs:
       
       env:
        FILE: akhil.txt
-       File: test.txt
+       File1: test.txt
        
        AWS_REGION: 'ap-south-1' # optional: defaults to us-east-1
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
