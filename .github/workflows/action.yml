@@ -13,7 +13,7 @@ jobs:
        args: --acl public-read
       
       env:
-       FILE: ./akhil.txt
+       FILE: job30
        
        AWS_REGION: 'ap-south-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
