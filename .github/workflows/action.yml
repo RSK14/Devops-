@@ -1,9 +1,6 @@
 # inside .github/workflows/your-action.yml
 name: Add File to Bucket
-on:
-  pull_request:
-  push:
-    branches: master
+on: push
 
 jobs:
   deploy:
@@ -15,12 +12,9 @@ jobs:
       uses: RSK14/Devops-@master
       with:
        args: --acl public-read
-    - name: Test
-      run: echo "${FILE}"     
-      
       env:
-       FILE: ./test30
-       AWS_REGION: 'ap-south-1' # optional: defaults to us-east-1
+       FILE: test.txt
+       AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
