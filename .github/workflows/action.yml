@@ -16,7 +16,7 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: akhil
+       FILE: job30
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }} / ${{ secrets.AWS_S3_BUCKET_PRO }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
