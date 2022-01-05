@@ -1,15 +1,15 @@
 # inside .github/workflows/your-action.yml
 name: Add File to Bucket
-on:
-  pull_request:
-  push:
-    branches: master
+#on:
+ # pull_request:
+  #push:
+   # branches: master
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+#jobs:
+ # deploy:
+  #  runs-on: ubuntu-latest
 
-    steps:
+   # steps:
     - uses: actions/checkout@master
     - name: Upload file to bucket
       uses: RSK14/Devops-@master
