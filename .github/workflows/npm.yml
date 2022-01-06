@@ -16,7 +16,7 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: job1
+       FILE: test30
     - name: Install
       run: npm cache clean --force
     - name: Install  
