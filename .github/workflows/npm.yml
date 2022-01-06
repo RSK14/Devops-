@@ -16,7 +16,7 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: test30
+       FILE: business-ezreturns-web
     - name: Install
       run: npm cache clean --force
     - name: Install  
