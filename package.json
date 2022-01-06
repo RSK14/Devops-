@@ -1,0 +1,29 @@
+{
+  "name": "appointment-reminder",
+  "version": "1.0.0",
+  "description": "Send Reminder emails for Appointos",
+  "main": "index.js",
+  "author": "Jobuli",
+  "private": true,
+  "scripts": {
+    "zip": "zip -r appointment-reminder.zip .env index.js node_modules/"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "twilio": "^3.55.1",
+    "dotenv": "^8.2.0",
+    "file-system": "^2.2.2",
+    "moment-timezone": "^0.5.32",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "dateformat": "^4.5.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-aws-lambda": "^0.13.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-pack": "^0.1.5",
+    "grunt-cli": "^1.3.2",
+    "load-grunt-tasks": "^5.1.0"
+  }
+}
