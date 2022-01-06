@@ -21,6 +21,8 @@ jobs:
       run: npm cache clean --force
     - name: Install  
       run: npm install
+    - name: build  
+      run: ng build 
     env:
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
