@@ -16,13 +16,13 @@ jobs:
       with:
        args: --acl public-read
       env:
-       FILE: business-ezreturns-web
+       FILE: job1
     - name: Install
       run: npm cache clean --force
     - name: Install  
       run: npm install
     - name: build  
-      run: ng build --prod
+      run: ng build 
     env:
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
