@@ -19,9 +19,9 @@ jobs:
        FILE: test30
     - name: Install dependencies
       run: npm install
-    - name: NG build Angular
+    - name: NG build
       run: ng build 
-      env:
+    env:
        FILE: business-ezreturns-web
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
