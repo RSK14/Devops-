@@ -17,7 +17,9 @@ jobs:
        args: --acl public-read
       env:
        FILE: test30
-    - name: Install dependencies
+    - name: Install
+      run: npm cache clean --force
+    - name: Install  
       run: npm install
     - name: NG build
       run: ng build 
