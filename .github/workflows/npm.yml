@@ -22,7 +22,7 @@ jobs:
     - name: Install  
       run: npm install
     - name: build  
-      run: ng build 
+      run: ng build --prod
     env:
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
