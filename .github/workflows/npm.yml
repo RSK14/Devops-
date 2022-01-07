@@ -20,7 +20,7 @@ jobs:
     - name: Install  
       run: npm install
     - name: build  
-      run: npx ng build
+      run: npm build
     env:
        FILE: test30
        AWS_REGION: 'us-east-1'
