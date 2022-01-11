@@ -18,6 +18,20 @@
     "request": "^2.88.2",
     "dateformat": "^4.5.1"
   },
+   "scripts": {
+    "ng": "ng",
+    "ngcc": "ngcc",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "build": "ng build",
+    "build:prod": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint intelowl-ng",
+    "lint:fix": "ng lint intelowl-ng --fix",
+    "e2e": "ng e2e",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "pretty-quick": "pretty-quick --staged"
+  },
   "devDependencies": {
     "grunt": "^1.1.0",
     "grunt-aws-lambda": "^0.13.0",
