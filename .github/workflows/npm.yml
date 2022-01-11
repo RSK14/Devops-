@@ -17,8 +17,19 @@ jobs:
        args: --acl public-read
     - name: Install
       run: npm cache clean --force
-    - name: Install  
-      run: npm install && ng build && ng build --prod
+      
+    - name: Install
+      run: npm install
+
+    - name: Lint
+      run: npm run lint
+
+    - name: Test
+      run: npm run test
+
+    - name: Build
+      run: npm run ng build
+
     env:
        FILE: test30
        AWS_REGION: 'us-east-1'
