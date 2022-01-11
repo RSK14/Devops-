@@ -38,7 +38,4 @@ aws s3 cp ${FILE} s3://${S3_BUCKET}/${FILE} --recursive
 
 rm -rf ~/.aws
 
-npm -i
-ng build 
-ng build --prod
 
