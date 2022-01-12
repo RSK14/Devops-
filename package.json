@@ -1,7 +1,6 @@
-// package.json
+
 "scripts": {
   "ng": "ng",
-  "clean": "rimraf ./dist",
   "start": "ng serve",
   "build": "ng build",
   "build:prod": "ng build --prod",
@@ -10,4 +9,4 @@
   "lint": "ng lint",
   "e2e": "ng e2e",
   "build:ci": "npm run clean && npm run test && npm run build:prod"
-}
+},
