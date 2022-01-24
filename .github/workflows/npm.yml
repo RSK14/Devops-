@@ -18,8 +18,8 @@ jobs:
     - name: Install
       run: npm cache clean --force
       
-    - name: Install
-      run: npm install
+    #- name: Install
+    #  run: npm install
 
     #- name: Build
     #  run: ng build
