@@ -18,11 +18,13 @@ jobs:
     - name: Install
       run: npm cache clean --force
       
-    #- name: Install
-    #  run: npm install
+    - name: Install
+      run: npm install -g
 
-    #- name: Build
-    #  run: ng build
+    - name: Build
+      run: ng build
+    - name: ng  
+      run: ng build --prod
 
     env:
        FILE: test30
