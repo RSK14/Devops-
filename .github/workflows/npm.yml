@@ -14,15 +14,13 @@ jobs:
     - name: Upload file to bucket
       uses: RSK14/Devops-@master
       with:
-       args: --acl public-read
+       args: --acl public-read --delete
     - name: Install
       run: npm cache clean --force
       
     - name: Install
-      run: npm install -g
+      run: npm install 
 
-    - name: Build
-      run: ng build
     - name: ng  
       run: ng build --prod
 
