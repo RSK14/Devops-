@@ -22,7 +22,7 @@ jobs:
       run: npm install -g @angular/cli
     
     - name: NG build Angular
-      run: ng build   
+      run: ng build --prod   
 
     env:
        FILE: test30
