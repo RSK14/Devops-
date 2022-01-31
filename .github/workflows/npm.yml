@@ -14,17 +14,21 @@ jobs:
     - name: Upload file to bucket
       uses: RSK14/Devops-@master
       with:
-       args: --acl public-read
+       args: --acl public-read --delete
     - name: Install
       run: npm cache clean --force
-    - name: Install  
-      run: npm install
-    - name: build  
-      run: npm ng build
+      
+    - name: Install
+      run: npm install -g @angular/cli
+    
+    #- name: NG build Angular
+    #  run: ng build --prod   
+
     env:
        FILE: test30
        AWS_REGION: 'us-east-1'
        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+       DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
        SOURCE_DIR: "deploy"
