@@ -19,7 +19,7 @@ jobs:
       run: npm cache clean --force
       
     - name: Install
-      run: npm install && npm audit fix --force
+      run: npm install && npm audit fix 
     
     - name: ng qa
       run: ng build && ng build --prod
