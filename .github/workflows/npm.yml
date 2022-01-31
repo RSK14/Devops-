@@ -15,11 +15,9 @@ jobs:
       uses: RSK14/Devops-@master
       with:
        args: --acl public-read --delete
+   
     - name: Install
-      run: npm cache clean --force
-      
-    - name: Install
-      run: npm install && npm audit fix 
+      run: npm install
     
     - name: ng qa
       run: ng build && ng build --prod
