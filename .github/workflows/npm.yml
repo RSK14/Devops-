@@ -19,13 +19,11 @@ jobs:
       run: npm cache clean --force
       
     - name: Install
-      run: npm install -i
+      run: npm install -i && npm audit fix --force
     
     - name: ng qa
-      run: ng build  
-    - name: ng prod
-      run: ng build --prod
-
+      run: ng build && ng build --prod
+ 
     env:
        FILE: test30
        AWS_REGION: 'us-east-1'
