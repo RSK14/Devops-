@@ -1,0 +1,89 @@
+.nh
+.TH "GH-ISSUE-LIST" "1" "Dec 2021" "GitHub CLI 2.4.0" "GitHub CLI manual"
+
+.SH NAME
+.PP
+gh-issue-list - List and filter issues in this repository
+
+
+.SH SYNOPSIS
+.PP
+\fB\fCgh issue list [flags]\fR
+
+
+.SH OPTIONS
+.TP
+\fB\fC-a\fR, \fB\fC--assignee\fR \fB\fC<string>\fR
+Filter by assignee
+
+.TP
+\fB\fC-A\fR, \fB\fC--author\fR \fB\fC<string>\fR
+Filter by author
+
+.TP
+\fB\fC-q\fR, \fB\fC--jq\fR \fB\fC<expression>\fR
+Filter JSON output using a jq expression
+
+.TP
+\fB\fC--json\fR \fB\fC<fields>\fR
+Output JSON with the specified fields
+
+.TP
+\fB\fC-l\fR, \fB\fC--label\fR \fB\fC<strings>\fR
+Filter by labels
+
+.TP
+\fB\fC-L\fR, \fB\fC--limit\fR \fB\fC<int>\fR
+Maximum number of issues to fetch
+
+.TP
+\fB\fC--mention\fR \fB\fC<string>\fR
+Filter by mention
+
+.TP
+\fB\fC-m\fR, \fB\fC--milestone\fR \fB\fC<number>\fR
+Filter by milestone number or \fB\fCtitle\fR
+
+.TP
+\fB\fC-S\fR, \fB\fC--search\fR \fB\fC<query>\fR
+Search issues with query
+
+.TP
+\fB\fC-s\fR, \fB\fC--state\fR \fB\fC<string>\fR
+Filter by state: {open|closed|all}
+
+.TP
+\fB\fC-t\fR, \fB\fC--template\fR \fB\fC<string>\fR
+Format JSON output using a Go template
+
+.TP
+\fB\fC-w\fR, \fB\fC--web\fR
+Open the browser to list the issue(s)
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.TP
+\fB\fC-R\fR, \fB\fC--repo\fR \fB\fC<[HOST/]OWNER/REPO>\fR
+Select another repository using the [HOST/]OWNER/REPO format
+
+
+.SH EXAMPLE
+.PP
+.RS
+
+.nf
+$ gh issue list -l "bug" -l "help wanted"
+$ gh issue list -A monalisa
+$ gh issue list -a "@me"
+$ gh issue list --web
+$ gh issue list --milestone "The big 1.0"
+$ gh issue list --search "error no:assignee sort:created-asc"
+
+
+.fi
+.RE
+
+
+.SH SEE ALSO
+.PP
+\fB\fCgh-issue(1)\fR

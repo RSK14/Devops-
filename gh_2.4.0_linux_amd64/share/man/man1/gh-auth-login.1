@@ -1,0 +1,69 @@
+.nh
+.TH "GH-AUTH-LOGIN" "1" "Dec 2021" "GitHub CLI 2.4.0" "GitHub CLI manual"
+
+.SH NAME
+.PP
+gh-auth-login - Authenticate with a GitHub host
+
+
+.SH SYNOPSIS
+.PP
+\fB\fCgh auth login [flags]\fR
+
+
+.SH DESCRIPTION
+.PP
+Authenticate with a GitHub host.
+
+.PP
+The default authentication mode is a web-based browser flow.
+
+.PP
+Alternatively, pass in a token on standard input by using \fB\fC--with-token\fR\&.
+The minimum required scopes for the token are: "repo", "read:org".
+
+.PP
+The --scopes flag accepts a comma separated list of scopes you want your gh credentials to have. If
+absent, this command ensures that gh has access to a minimum set of scopes.
+
+
+.SH OPTIONS
+.TP
+\fB\fC-h\fR, \fB\fC--hostname\fR \fB\fC<string>\fR
+The hostname of the GitHub instance to authenticate with
+
+.TP
+\fB\fC-s\fR, \fB\fC--scopes\fR \fB\fC<strings>\fR
+Additional authentication scopes for gh to have
+
+.TP
+\fB\fC-w\fR, \fB\fC--web\fR
+Open a browser to authenticate
+
+.TP
+\fB\fC--with-token\fR
+Read token from standard input
+
+
+.SH EXAMPLE
+.PP
+.RS
+
+.nf
+# start interactive setup
+$ gh auth login
+
+# authenticate against github.com by reading the token from a file
+$ gh auth login --with-token < mytoken.txt
+
+# authenticate with a specific GitHub Enterprise Server instance
+$ gh auth login --hostname enterprise.internal
+
+
+.fi
+.RE
+
+
+.SH SEE ALSO
+.PP
+\fB\fCgh-auth(1)\fR

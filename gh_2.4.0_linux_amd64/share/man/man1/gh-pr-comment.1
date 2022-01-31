@@ -1,0 +1,64 @@
+.nh
+.TH "GH-PR-COMMENT" "1" "Dec 2021" "GitHub CLI 2.4.0" "GitHub CLI manual"
+
+.SH NAME
+.PP
+gh-pr-comment - Create a new pr comment
+
+
+.SH SYNOPSIS
+.PP
+\fB\fCgh pr comment [<number> | <url> | <branch>] [flags]\fR
+
+
+.SH DESCRIPTION
+.PP
+Create a new pr comment.
+
+.PP
+Without an argument, the pull request that belongs to the current branch
+is selected.			
+
+.PP
+With '--web', comment on the pull request in a web browser instead.
+
+
+.SH OPTIONS
+.TP
+\fB\fC-b\fR, \fB\fC--body\fR \fB\fC<string>\fR
+Supply a body. Will prompt for one otherwise.
+
+.TP
+\fB\fC-F\fR, \fB\fC--body-file\fR \fB\fC<file>\fR
+Read body text from file (use "-" to read from standard input)
+
+.TP
+\fB\fC-e\fR, \fB\fC--editor\fR
+Add body using editor
+
+.TP
+\fB\fC-w\fR, \fB\fC--web\fR
+Add body in browser
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.TP
+\fB\fC-R\fR, \fB\fC--repo\fR \fB\fC<[HOST/]OWNER/REPO>\fR
+Select another repository using the [HOST/]OWNER/REPO format
+
+
+.SH EXAMPLE
+.PP
+.RS
+
+.nf
+$ gh pr comment 22 --body "This looks great, lets get it deployed."
+
+
+.fi
+.RE
+
+
+.SH SEE ALSO
+.PP
+\fB\fCgh-pr(1)\fR
