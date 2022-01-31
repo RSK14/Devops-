@@ -19,10 +19,12 @@ jobs:
       run: npm cache clean --force
       
     - name: Install
-      run: npm install -g @angular/cli
+      run: npm install -i
     
-    #- name: NG build Angular
-    #  run: ng build --prod   
+    - name: ng qa
+      run: ng build  
+    - name: ng prod
+      run: ng build --prod
 
     env:
        FILE: test30
