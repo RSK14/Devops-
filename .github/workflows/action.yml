@@ -1,5 +1,5 @@
 name: Add File to Bucket
-'on':
+on:
   push:
     branches:
       - master
